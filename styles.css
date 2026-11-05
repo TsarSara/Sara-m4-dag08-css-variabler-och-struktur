@@ -45,9 +45,29 @@
   --font-heading: font-family: Montserrat, Arial, sans-serif; 
   --font-body: font-family: Krub, "Segoe UI", sans-serif; 
   --font-caption: font-family: Montserrat, Arial, sans-serif; 
-  
+
+  --fs-base: 1rem;
+  --fs-h1: 1.75rem;
+  --fs-h2: 1.75rem;
+  --fs-h3: 1.25rem;
+  --fs-hero: 1.125rem;
+  --fs-hero-h2: 2.25rem;
+
+  /* Space */
+  --space-1: 8px;
+  --space-2: 16px;
+  --space-3: 24px;
+  --space-4: 32px;
+  --space-5: 40px;
+  --space-6: 48px;
+  --space-7: 56px; 
+
+  /* Radius */
+  --radius-s: 4px;
+  --radius-m: 8px;
+  --radius-l: 16px;
+  --radius-xl: 32px;
 }
-/* Montserrat, sans-serif; Krub, sans-serif; */
 
 body {
   margin: 0;
@@ -63,7 +83,7 @@ header {
   background: var(--primary-gradient-to-bottom); 
   color:var(--color-text-default);
   border-bottom: 1px solid var(--color-primary-500);
-  padding: 16px 24px;
+  padding: var(--space-2) var(--space-3); /* 16px 24px */
   /*   background-color: #5b3a29;
   color: #ffffff; */
 }
@@ -83,28 +103,28 @@ nav a {
 }
 
 main {
-  padding: 24px;
+  padding: var(--space-3);
   max-width: 1100px;
   margin: 0 auto;
 }
 
 section {
-  margin-bottom: 40px;
+  margin-bottom: var(--space-5); /* 40px */
 }
 
 article {
   background-color: var(--color-neutral-50); /* #ffffff */
   border: 1px solid var(--color-neutral-500); /*  #e3d5c3 */
-  border-radius: 8px;
-  padding: 16px;
-  margin-bottom: 16px;
+  border-radius: var(--radius-m); /* 8px */
+  padding: var(--space-2); /* 16px */
+  margin-bottom: var(--space-2); /* 16px */
 }
 
 article img,
 #om-oss img {
   max-width: 100%;
   height: auto;
-  border-radius: 4px;
+  border-radius: var(--radius-s); /* 4px */
 }
 
 #om-oss img {
@@ -115,9 +135,9 @@ article img,
   display: inline-block;
   background: var(--button-secondary-gradient);
   color: var(--color-text-default); /*   background-color: #8c1010; color: #ffffff; */
-  padding: 12px 20px;
+  padding: var(--space-2) var(--space-3); /* 12px 20px */
   border: 1px solid var(--color-secondary-500);
-  border-radius: 6px;
+  border-radius: var(--radius-m); /* 6px */
   text-decoration: none;
 }
 
@@ -125,7 +145,7 @@ footer {
   background: var(--primary-gradient-to-top);  /*   background-color: #2b1c14; color: #ffffff; */
   border-top: 1px solid var(--color-primary-500);
   color: var(--color-text-default);
-  padding: 8px 24px 32px 32px;
+  padding: var(--space-1) var(--space-3) var(--space-3) var(--space-3);  /* 8px 24px 32px 32px */
 }
 
 footer a {
@@ -139,7 +159,7 @@ address {
 /* ===== Dag 4: typografi och färg ===== */
 body {
   font-family: Krub, sans-serif; 
-  font-size: 1rem;
+  font-size: var(--fs-base); /* 1rem */
   line-height: 1.6;
 }
 
@@ -153,17 +173,17 @@ h3 {
 
 header h1 {
   color: var(--color-text-default);
-  font-size: 1.75rem;
+  font-size: var(--fs-h1); /* 1.75rem */
 }
 
 h2 {
-  font-size: 1.75rem;
-  margin: 0 0 16px;
+  font-size: var(--fs-h2); /* 1.75rem */
+  margin: 0 0 var(--space-2); /* 16px */
 }
 
 h3 {
-  font-size: 1.25rem;
-  margin: 12px 0 8px;
+  font-size: var(--fs-h3) ; /* 1.25rem */
+  margin: var(--space-2) 0 var(--space-1) ; /* 12px 0 8px */
 }
 
 .pris {
@@ -203,31 +223,31 @@ textarea:focus-visible {
 #hero {
   background-color: var(--color-neutral-300) ;  /* #f3e3cf */
   border: 1px solid var(--color-neutral-500);
-  padding: 32px 24px;
-  border-radius: 8px;
+  padding: var(--space-4) var(--space-3); /* 32px 24px */
+  border-radius: var(--radius-m); /* 8px */
 }
 
 #hero p {
-  font-size: 1.125rem;
+  font-size: var(--fs-hero); /* 1.125rem */
   max-width: 60ch;
 }
 
 /* Formulär */
 .falt,
 .val {
-  margin-bottom: 16px;
+  margin-bottom: var(--space-2); /* 16px */
 }
 
 label {
   display: block;
   font-weight: 600;
-  margin-bottom: 4px;
+  margin-bottom: var(--space-1); /* 4px */
 }
 
 .val label {
   display: inline;
   font-weight: 400;
-  margin-left: 8px;
+  margin-left: var(--space-1); /* 8px */
 }
 
 input[type="text"],
@@ -238,22 +258,22 @@ select,
 textarea {
   width: 100%;
   max-width: 28rem;
-  padding: 10px 12px;
+  padding: var(--space-1) var(--space-2); /* 10px 12px */
   border: 2px solid var(--color-neutral-400); /* #8a7a6a */
-  border-radius: 6px;
+  border-radius: var(--radius-m); /* 6px */
   font: inherit;
 }
 
 fieldset {
   border: 1px solid var(--color-neutral-400); /* #e3d5c3 */
-  border-radius: 8px;
-  margin: 0 0 16px;
-  padding: 12px 16px;
+  border-radius: var(--radius-m); /* 8px */
+  margin: 0 0 var(--space-2); /* 16px */
+  padding: var(--space-1) var(--space-2); /* 12px 16px */
 }
 
 legend {
   font-weight: 700;
-  padding: 0 8px;
+  padding: 0 var(--space-1); /* 8px */
 }
 
 /* ===== Dag 5: Flexbox ===== */
@@ -262,7 +282,7 @@ header {
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-  gap: 8px 24px;
+  gap: var(--space-1) var(--space-3); /* 8px 24px */
 }
 
 header h1 {
@@ -271,14 +291,14 @@ header h1 {
 
 nav ul {
   display: flex;
-  gap: 20px;
+  gap: var(--space-3); /* 20px */
 }
 
 footer {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  gap: 8px;
+  gap: var(--space-1); /* 8px */
 }
 
 article {
@@ -294,7 +314,7 @@ article .pris {
 .meny-lista {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 20px;
+  gap: var(--space-3); /* 20px */
 }
 
 .meny-lista article {
@@ -304,10 +324,10 @@ article .pris {
 #om-oss {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 8px 32px;
+  gap:  var(--space-1) var(--space-3); /* 8px 24px */
   border: 1px solid var(--color-neutral-600);
-  padding: 32px 24px;
-  border-radius: 8px;
+  padding: var(--space-3); /*  32px 24px */
+  border-radius: var(--space-1); /* 8px */
 }
 
 #om-oss h2 {
@@ -317,24 +337,24 @@ article .pris {
 /* ===== Dag 7: Responsiv design (mobile first) ===== */
 @media (min-width: 600px) {
   main {
-    padding: 32px;
+    padding: var(--space-4); /* 32px */
   }
 
   header {
-    padding: 24px 32px;
+    padding: var(--space-4) var(--space-4); /*  24px 32px */
   }
 
   #hero {
-    padding: 56px 40px;
+    padding: var(--space-4) var(--space-4); /*  56px 40px */
   }
 
   #hero h2 {
-    font-size: 2.25rem;
+    font-size: var(--fs-hero-h2); /* 2.25rem */
   }
 
   footer {
-    padding: 16px 40px;
-    gap: 16px;
+    padding: var(--space-4) var(--space-4); /*  16px 40px */
+    gap: var(--space-2); /*  16px */
   }
 }
 
@@ -350,6 +370,6 @@ article .pris {
   }
 
   header {
-    padding: 20px 48px;
+    padding: var(--space-3) var(--space-6); /*20px 48px;*/ 
   }
 }
