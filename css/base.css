@@ -45,7 +45,7 @@ a {
 
 a:hover {
   color: var(--color-text-hover); /* #5e0a0a; */
-  font-weight: 700;
+  font-weight: 800;
 }
 
 section {
