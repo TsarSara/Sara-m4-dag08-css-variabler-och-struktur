@@ -1,0 +1,164 @@
+/* Jag stör mig på att headern ändras beroende på om jag är inne på startsidan eller bokningen. 
+Vet just nu inte hur jag ska fixa det.*/
+header { 
+  background: var(--primary-gradient-to-bottom); 
+  color:var(--color-text-default);
+  border-bottom: 1px solid var(--color-primary-500);
+  padding: var(--space-2) var(--space-3); /* 16px 24px */
+  /*   background-color: #5b3a29;
+  color: #ffffff; */
+}
+
+header h1 {
+  margin: 0 0 var(--space-1); /* 8px */
+}
+
+header h1 {
+  color: var(--color-text-default);
+  font-size: var(--fs-h1); /* 1.75rem */
+}
+
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav a {
+  color: var(--color-text-default);   /*  #751068 */ 
+}
+
+nav a {
+  font-weight: 600;
+}
+
+main {
+  padding: var(--space-3);
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+#hero {
+  background-color: var(--color-neutral-300) ;  /* #f3e3cf */
+  border: 1px solid var(--color-neutral-500);
+  padding: var(--space-4) var(--space-3); /* 32px 24px */
+  border-radius: var(--radius-m); /* 8px */
+}
+
+#hero p {
+  font-size: var(--fs-hero); /* 1.125rem */
+  max-width: 60ch;
+}
+
+footer {
+  background: var(--primary-gradient-to-top);  /*   background-color: #2b1c14; color: #ffffff; */
+  border-top: 1px solid var(--color-primary-500);
+  color: var(--color-text-default);
+  padding: var(--space-1) var(--space-3) var(--space-3) var(--space-3);  /* 8px 24px 32px 32px */
+}
+
+footer a {
+  color: var(--color-text-default) ;  /* #ffffff */
+}
+
+article img,
+#om-oss img {
+  max-width: 100%;
+  height: auto;
+  border-radius: var(--radius-s); /* 4px */
+}
+
+#om-oss img {
+  border: 3px solid var(--color-secondary-500);
+}
+
+header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-1) var(--space-3); /* 8px 24px */
+}
+
+header h1 {
+  margin: 0;
+}
+
+nav ul {
+  display: flex;
+  gap: var(--space-3); /* 20px */
+}
+
+footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: var(--space-1); /* 8px */
+}
+
+/* ===== Dag 6: Grid ===== */
+.meny-lista {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: var(--space-3); /* 20px */
+}
+
+.meny-lista article {
+  margin-bottom: 0;
+}
+
+#om-oss {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap:  var(--space-1) var(--space-3); /* 8px 24px */
+  border: 1px solid var(--color-neutral-600);
+  padding: var(--space-4); /*  32px 24px */
+  border-radius: var(--space-1); /* 8px */
+}
+
+#om-oss h2 {
+  grid-column: 1 / -1;
+}
+
+/* ===== Dag 7: Responsiv design (mobile first) ===== */
+@media (min-width: 600px) {
+  main {
+    padding: var(--space-4); /* 32px */
+  }
+
+  header {
+    padding: var(--space-4) var(--space-4); /*  24px 32px */
+  }
+
+  #hero {
+    padding: var(--space-4) var(--space-4); /*  56px 40px */
+  }
+
+  #hero h2 {
+    font-size: var(--fs-hero-h2); /* 2.25rem */
+  }
+
+  footer {
+    padding: var(--space-4) var(--space-4); /*  16px 40px */
+    gap: var(--space-2); /*  16px */
+  }
+}
+
+@media (min-width: 900px) {
+  #om-oss {
+    grid-template-columns: 1fr 1fr;
+    align-items: start;
+  }
+
+  #om-oss img {
+    grid-row: 2 / span 2;
+    grid-column: 2;
+  }
+
+  header {
+    padding: var(--space-3) var(--space-6); /*20px 48px;*/ 
+  }
+}
+
+

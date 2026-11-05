@@ -1,0 +1,63 @@
+:root {
+    /* Colors */
+  --color-primary-900: #1E4A4F;
+  --color-primary-700: #3D818A;
+  --color-primary-600: #4F9DA7;
+  --color-primary-500: #64B9C4;
+  --color-primary-400: #7AD5E1;
+  --color-primary-300: #91F2FE;
+  --color-secondary-900: #4D2C3C; 
+  --color-secondary-800: #673D51;
+  --color-secondary-700: #804E67;
+  --color-secondary-600: #9A617D;
+  --color-secondary-500: #B37593;
+  --color-secondary-400: #CD89AB;
+  --color-secondary-300: #E69FC2;
+  --color-secondary-200: #FFB5DA;
+  --color-neutral-700: #51714D;
+  --color-neutral-600: #668A61;
+  --color-neutral-500: #7BA376;
+  --color-neutral-400: #92BD8C;
+  --color-neutral-300: #AAD6A4; 
+  --color-neutral-200: #C2F0BC;
+  --color-neutral-50: #F5FAF5;
+  --color-text-default: #051D20;
+  --color-text-hover: var(--color-primary-900);
+  --color-outline: #1a73e8;
+
+  --background-gradient: linear-gradient( to bottom, var(--color-neutral-200) 42%, var(--color-primary-500) 100%);
+  --primary-gradient-to-bottom: linear-gradient(to bottom, var(--color-primary-500) 60%, var(--color-primary-400) 100%);
+  --primary-gradient-to-top: linear-gradient(to top, var(--color-primary-500) 50%, var(--color-primary-400) 100%);
+  --border-primary: var(--color-primary-600);
+  --border-neutral: var(--color-neutral-500);
+  --button-primary-gradient: linear-gradient(to top, var(--color-primary-600) 30%, var(--color-primary-300) 100%);
+  --button-secondary-gradient: linear-gradient(to top, var(--color-secondary-400) 30%, var(--color-secondary-300) 100%);
+  --button-hover-secondary: var(--color-secondary-500);
+
+  /* Fonts */
+  --font-heading: font-family: Montserrat, Arial, sans-serif; 
+  --font-body: font-family: Krub, "Segoe UI", sans-serif; 
+  --font-caption: font-family: Montserrat, Arial, sans-serif; 
+
+  --fs-base: 1rem;
+  --fs-h1: 1.75rem;
+  --fs-h2: 1.75rem;
+  --fs-h3: 1.25rem;
+  --fs-hero: 1.125rem;
+  --fs-hero-h2: 2.25rem;
+
+  /* Space */
+  --space-1: 8px;
+  --space-2: 16px;
+  --space-3: 24px;
+  --space-4: 32px;
+  --space-5: 40px;
+  --space-6: 48px;
+  --space-7: 56px; 
+
+  /* Radius */
+  --radius-s: 4px;
+  --radius-m: 8px;
+  --radius-l: 16px;
+  --radius-xl: 32px;
+}
