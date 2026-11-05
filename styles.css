@@ -5,17 +5,67 @@
   box-sizing: border-box;
 }
 
+:root {
+    /* Colors */
+  --color-primary-900: #1E4A4F;
+  --color-primary-700: #3D818A;
+  --color-primary-600: #4F9DA7;
+  --color-primary-500: #64B9C4;
+  --color-primary-400: #7AD5E1;
+  --color-primary-300: #91F2FE;
+  --color-secondary-900: #4D2C3C; 
+  --color-secondary-800: #673D51;
+  --color-secondary-700: #804E67;
+  --color-secondary-600: #9A617D;
+  --color-secondary-500: #B37593;
+  --color-secondary-400: #CD89AB;
+  --color-secondary-300: #E69FC2;
+  --color-secondary-200: #FFB5DA;
+  --color-neutral-700: #51714D;
+  --color-neutral-600: #668A61;
+  --color-neutral-500: #7BA376;
+  --color-neutral-400: #92BD8C;
+  --color-neutral-300: #AAD6A4; 
+  --color-neutral-200: #C2F0BC;
+  --color-neutral-50: #F5FAF5;
+  --color-text-default: #051D20;
+  --color-text-hover: var(--color-primary-900);
+  --color-outline: #1a73e8;
+
+  --background-gradient: linear-gradient( to bottom, var(--color-neutral-200) 42%, var(--color-primary-500) 100%);
+  --primary-gradient-to-bottom: linear-gradient(to bottom, var(--color-primary-500) 60%, var(--color-primary-400) 100%);
+  --primary-gradient-to-top: linear-gradient(to top, var(--color-primary-500) 50%, var(--color-primary-400) 100%);
+  --border-primary: var(--color-primary-600);
+  --border-neutral: var(--color-neutral-500);
+  --button-primary-gradient: linear-gradient(to top, var(--color-primary-600) 30%, var(--color-primary-300) 100%);
+  --button-secondary-gradient: linear-gradient(to top, var(--color-secondary-400) 30%, var(--color-secondary-300) 100%);
+  --button-hover-secondary: var(--color-secondary-500);
+
+  /* Fonts */
+  --font-heading: font-family: Montserrat, Arial, sans-serif; 
+  --font-body: font-family: Krub, "Segoe UI", sans-serif; 
+  --font-caption: font-family: Montserrat, Arial, sans-serif; 
+  
+}
+/* Montserrat, sans-serif; Krub, sans-serif; */
+
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  color: #222222;
-  background-color: #fffaf3;
+  color: var(--color-text-default);
+  background: var(--background-gradient)
+  /* color: #222222;
+  background-color: #fffaf3; */
+
 }
 
 header {
-  background-color: #5b3a29;
-  color: #ffffff;
+  background: var(--primary-gradient-to-bottom); 
+  color:var(--color-text-default);
+  border-bottom: 1px solid var(--color-primary-500);
   padding: 16px 24px;
+  /*   background-color: #5b3a29;
+  color: #ffffff; */
 }
 
 header h1 {
@@ -29,7 +79,7 @@ nav ul {
 }
 
 nav a {
-  color: #ffffff;
+  color: var(--color-text-default);   /*  #751068 */ 
 }
 
 main {
@@ -43,8 +93,8 @@ section {
 }
 
 article {
-  background-color: #ffffff;
-  border: 1px solid #e3d5c3;
+  background-color: var(--color-neutral-50); /* #ffffff */
+  border: 1px solid var(--color-neutral-500); /*  #e3d5c3 */
   border-radius: 8px;
   padding: 16px;
   margin-bottom: 16px;
@@ -57,24 +107,29 @@ article img,
   border-radius: 4px;
 }
 
+#om-oss img {
+  border: 3px solid var(--color-secondary-500);
+}
+
 .knapp {
   display: inline-block;
-  background-color: #8c1010;
-  color: #ffffff;
+  background: var(--button-secondary-gradient);
+  color: var(--color-text-default); /*   background-color: #8c1010; color: #ffffff; */
   padding: 12px 20px;
-  border: 0;
+  border: 1px solid var(--color-secondary-500);
   border-radius: 6px;
   text-decoration: none;
 }
 
 footer {
-  background-color: #2b1c14;
-  color: #ffffff;
-  padding: 24px;
+  background: var(--primary-gradient-to-top);  /*   background-color: #2b1c14; color: #ffffff; */
+  border-top: 1px solid var(--color-primary-500);
+  color: var(--color-text-default);
+  padding: 8px 24px 32px 32px;
 }
 
 footer a {
-  color: #ffffff;
+  color: var(--color-text-default) ;  /* #ffffff */
 }
 
 address {
@@ -83,7 +138,7 @@ address {
 
 /* ===== Dag 4: typografi och färg ===== */
 body {
-  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  font-family: Krub, sans-serif; 
   font-size: 1rem;
   line-height: 1.6;
 }
@@ -91,13 +146,13 @@ body {
 h1,
 h2,
 h3 {
-  font-family: Georgia, "Times New Roman", serif;
+  font-family: Montserrat, sans-serif;
   line-height: 1.2;
-  color: #3b2418;
+  color: var(--color-text-default); /* #3b2418 */
 }
 
 header h1 {
-  color: #ffffff;
+  color: var(--color-text-default);
   font-size: 1.75rem;
 }
 
@@ -113,16 +168,17 @@ h3 {
 
 .pris {
   font-weight: 700;
-  color: #8c1010;
+  color: var(--color-secondary-800); /* #8c1010 */
 }
 
 a {
-  color: #8c1010;
+  color: var(--color-text-default); /* #8c1010 */
   text-underline-offset: 3px;
 }
 
 a:hover {
-  color: #5e0a0a;
+  color: var(--color-text-hover); /* #5e0a0a; */
+  font-weight: 700;
 }
 
 nav a {
@@ -130,7 +186,9 @@ nav a {
 }
 
 .knapp:hover {
-  background-color: #6f0c0c;
+  background: var(--button-hover-secondary); /* #6f0c0c */
+  color: var(--color-text-hover);
+  font-weight: 700;
 }
 
 a:focus-visible,
@@ -138,12 +196,13 @@ button:focus-visible,
 input:focus-visible,
 select:focus-visible,
 textarea:focus-visible {
-  outline: 3px solid #1a73e8;
+  outline: 3px solid var(--color-outline);  /* #1a73e8 */
   outline-offset: 2px;
 }
 
 #hero {
-  background-color: #f3e3cf;
+  background-color: var(--color-neutral-300) ;  /* #f3e3cf */
+  border: 1px solid var(--color-neutral-500);
   padding: 32px 24px;
   border-radius: 8px;
 }
@@ -180,13 +239,13 @@ textarea {
   width: 100%;
   max-width: 28rem;
   padding: 10px 12px;
-  border: 2px solid #8a7a6a;
+  border: 2px solid var(--color-neutral-400); /* #8a7a6a */
   border-radius: 6px;
   font: inherit;
 }
 
 fieldset {
-  border: 1px solid #e3d5c3;
+  border: 1px solid var(--color-neutral-400); /* #e3d5c3 */
   border-radius: 8px;
   margin: 0 0 16px;
   padding: 12px 16px;
@@ -219,7 +278,7 @@ footer {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  gap: 16px;
+  gap: 8px;
 }
 
 article {
@@ -246,6 +305,9 @@ article .pris {
   display: grid;
   grid-template-columns: 1fr;
   gap: 8px 32px;
+  border: 1px solid var(--color-neutral-600);
+  padding: 32px 24px;
+  border-radius: 8px;
 }
 
 #om-oss h2 {
@@ -258,12 +320,21 @@ article .pris {
     padding: 32px;
   }
 
+  header {
+    padding: 24px 32px;
+  }
+
   #hero {
     padding: 56px 40px;
   }
 
   #hero h2 {
     font-size: 2.25rem;
+  }
+
+  footer {
+    padding: 16px 40px;
+    gap: 16px;
   }
 }
 
