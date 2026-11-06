@@ -1,5 +1,7 @@
+/* Här finns header, nav, main, hero, footer, img- om-oss article, om-oss, meny-lista, @media */
+
 /* Jag stör mig på att headern ändras beroende på om jag är inne på startsidan eller bokningen. 
-Vet just nu inte hur jag ska fixa det.*/
+Vet just nu inte hur jag ska fixa det. Hade inte länk till Goggle fonts i kontakt.html. */
 header { 
   background: var(--primary-gradient-to-bottom); 
   color:var(--color-text-default);

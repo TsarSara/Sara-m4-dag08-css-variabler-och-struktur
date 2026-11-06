@@ -1,3 +1,5 @@
+/* Här finns knapp, .pris, article, formulär */
+
 .knapp {
   display: inline-block;
   background: var(--button-secondary-gradient);
