@@ -116,7 +116,7 @@ article img,
   display: grid;
   grid-template-columns: 1fr;
   gap:  var(--space-1) var(--space-3); /* 8px 24px */
-  border: 1px solid var(--color-secondary-600);/* --color-neutral-600 --color-secondary-700 */
+  border: 1px solid var(--color-neutral-600);/* --color-neutral-600 --color-secondary-700 */
   padding: var(--space-4); /*  32px 24px */
   border-radius: var(--space-1); /* 8px */
 }
